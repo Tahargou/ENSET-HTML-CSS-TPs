@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP2 - Inscription Étudiant BDCC</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Inscription Annuaire BDCC - ENSET</h1>
+        <p>Remplissez le formulaire pour rejoindre la base de données des étudiants.</p>
+    </header>
+
+    <main>
+        <form action="#" method="post" enctype="multipart/form-data">
+            
+            <fieldset>
+                <legend>Informations Personnelles</legend>
+                
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" value="GOUNAINE" required>
+
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" value="Tahar" required>
+
+                <label for="email">Email professionnel :</label>
+                <input type="email" id="email" name="email" value="gounainetaher@gmail.com" required>
+
+                <label for="tel">Téléphone (Format FR/MA) :</label>
+                <input type="tel" id="tel" name="tel" pattern="(\+212|0)([ \-_/]*)(\d[ \-_/]*){9}" placeholder="+212 600000000" required>
+
+                <label for="date_naissance">Date de naissance :</label>
+                <input type="date" id="date_naissance" name="date_naissance" max="2008-01-01" required>
+                <small>Vous devez avoir au moins 18 ans.</small>
+            </fieldset>
+
+            <fieldset>
+                <legend>Sécurité du Compte</legend>
+                
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password" 
+                       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                       title="Doit contenir au moins 8 caractères, une majuscule et un chiffre" required>
+
+                <label for="confirm_password">Confirmer le mot de passe :</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Profil & Préférences</legend>
+
+                <label for="pays">Pays de résidence :</label>
+                <input list="pays-list" id="pays" name="pays" required>
+                <datalist id="pays-list">
+                    <option value="Maroc">
+                    <option value="France">
+                    <option value="Sénégal">
+                    <option value="Canada">
+                </datalist>
+
+                <p>Genre :</p>
+                <input type="radio" id="homme" name="genre" value="H" checked>
+                <label for="homme">Homme</label>
+                <input type="radio" id="femme" name="genre" value="F">
+                <label for="femme">Femme</label>
+
+                <p>Centres d'intérêt (Big Data) :</p>
+                <input type="checkbox" id="cloud" name="interet" value="cloud">
+                <label for="cloud">Cloud Computing</label>
+                <input type="checkbox" id="ai" name="interet" value="ai">
+                <label for="ai">Intelligence Artificielle</label>
+                <input type="checkbox" id="dev" name="interet" value="dev">
+                <label for="dev">Développement Full-stack</label>
+
+                <label for="bio">Biographie / Motivation :</label>
+                <textarea id="bio" name="bio" maxlength="500" placeholder="Parlez-nous de votre parcours à l'ESTG ou l'ENSET..."></textarea>
+
+                <label for="photo">Photo de profil :</label>
+                <input type="file" id="photo" name="photo" accept="image/*">
+            </fieldset>
+
+            <div class="cgu">
+                <input type="checkbox" id="cgu" name="cgu" required>
+                <label for="cgu">J'accepte les conditions générales d'utilisation</label>
+            </div>
+
+            <button type="submit">Finaliser l'inscription</button>
+        </form>
+    </main>
+
+    <footer>
+        <p><a href="../index.html">Retour à l'accueil</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>TP - Exercice 6 : Variables et Thèmes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+
+    <div class="card">
+        <h1>Système de Thèmes</h1>
+        <p>Cette carte change de couleur en fonction des variables CSS définies.</p>
+        <button onclick="toggleTheme()">Changer le thème</button>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            body.setAttribute('data-theme', currentTheme === 'light' ? 'dark' : 'light');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+.main-nav a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.main-nav a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #3498db;
+}
+
+article.featured {
+    background-color: #fffde7;
+    padding: 15px;
+    border: 1px solid #f1c40f;
+}
+
+article p:first-of-type {
+    color: #2c3e50;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+li:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+body { font-family: sans-serif; padding: 20px; }
+ul { list-style: none; display: flex; gap: 20px; padding: 0; }
+article { margin-bottom: 20px; }

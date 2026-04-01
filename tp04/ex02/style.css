@@ -1,0 +1,24 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    min-height: 100vh;       
+    background-color: #f0f2f5;
+}
+
+.box-centree {
+    width: 600px;
+    padding: 20px;
+    background-color: white;
+    border: 5px solid #333;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
